@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry
+            location="D:\qwx\repository\mysql\mysql-connector-java\8.0.15\mysql-connector-java-8.0.15.jar"/>
+
+    <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 生成的Java文件的编码-->
+        <property name="javaFileEncoding" value="UTF-8"></property >
+        <!-- 格式化java代码-->
+        <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"></property >
+
+        <!-- 格式化XML代码-->
+        <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"></property >
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+        connectionURL="jdbc:mysql://192.168.1.90:3306/qzy_test_08_02?generateSimpleParameterMetadata=true&amp;serverTimezone=Asia/Shanghai"
+        userId="root" password="123456">
+        <property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+<!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"-->
+<!--                        connectionURL="jdbc:mysql://47.98.128.42:33306/iktdevdb?generateSimpleParameterMetadata=true&amp;serverTimezone=Asia/Shanghai"-->
+<!--                        userId="iktweb" password="!ZHIjinYS201920">-->
+<!--            <property name="nullCatalogMeansCurrent" value="true" />-->
+<!--        </jdbcConnection>-->
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+
+        </javaTypeResolver>
+
+        <!-- generate Model -->
+        <javaModelGenerator targetPackage="com.iktapp.mapi.entity"
+                            targetProject="src\main\java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+
+        </javaModelGenerator>
+
+        <!-- generate xml -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src\main\resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!-- generate Mapper -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.iktapp.mapi.dao"
+                             targetProject="src\main\java" >
+            <property name="enableSubPackages" value="false"/>
+            <property name="exampleMethodVisibility" value="public"/>
+            <property name="mergeable" value="false"></property>
+        </javaClientGenerator>
+
+
+                <table tableName="user" domainObjectName="User">
+                            <property name="useActualColumnNames" value="false"/>
+                </table>
+
+
+
+    </context>
+</generatorConfiguration>

@@ -20,6 +20,12 @@
         <fastjson.version>1.2.61</fastjson.version>
         <shiro.version>1.6.0</shiro.version>
     </properties>
+    <modules>
+        <module>Server</module>
+        <module>Client</module>
+    </modules>
+
+
 
     <dependencies>
         <dependency>
@@ -123,6 +129,11 @@
                     </compilerArguments>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -140,3 +151,5 @@
         </repository>
     </repositories>
 </project>
+
+

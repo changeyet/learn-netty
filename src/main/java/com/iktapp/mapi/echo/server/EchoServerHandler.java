@@ -1,4 +1,4 @@
-package com.iktapp.mapi.echo;
+package com.iktapp.mapi.echo.server;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

@@ -11,6 +11,7 @@
     <groupId>com.iktapp</groupId>
     <artifactId>mapi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>mapi</name>
     <description>Demo project for Spring Boot</description>
 
@@ -19,10 +20,10 @@
         <mysql.version>8.0.15</mysql.version>
         <fastjson.version>1.2.61</fastjson.version>
         <shiro.version>1.6.0</shiro.version>
+
     </properties>
     <modules>
-        <module>Server</module>
-        <module>Client</module>
+        <module>echo</module>
     </modules>
 
 

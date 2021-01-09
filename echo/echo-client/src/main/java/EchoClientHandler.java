@@ -1,5 +1,3 @@
-package com.iktapp.mapi.echo.client;
-
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
